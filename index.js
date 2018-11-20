@@ -116,10 +116,11 @@ function versionFactory () {
 
 function pushCurrent (data) {
   // remove private properties
-  delete data.current._private
-
-  data.current.body = clean(data.current.body)
-  data.log.versions.push(data.current)
+  if (data.current) {
+    delete data.current._private    
+    data.current.body = clean(data.current.body)
+    data.log.versions.push(data.current)
+  }
 }
 
 function clean (str) {
