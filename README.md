@@ -4,6 +4,18 @@
 
 Change log parser for node.
 
+This is a copy of __changelog-parser__ module that include a bug fix in __function pushCurrent (data)__
+```
+function pushCurrent (data) {
+  // remove private properties
+  if (data.current) {
+    delete data.current._private    
+    data.current.body = clean(data.current.body)
+    data.log.versions.push(data.current)
+  }
+}
+```
+
 [npm-img]: https://img.shields.io/npm/v/changelog-parser.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/changelog-parser
 [travis-img]: https://img.shields.io/travis/hypermodules/changelog-parser.svg?style=flat-square
