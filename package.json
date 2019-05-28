@@ -17,7 +17,7 @@
     "Bogdan Plieshka <bogdanplieshka@gmail.com>"
   ],
   "dependencies": {
-    "line-reader": "^0.2.4",
+    "line-reader": "^0.4.0",
     "remove-markdown": "^0.2.2"
   },
   "devDependencies": {
